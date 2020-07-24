@@ -47,5 +47,14 @@ namespace PierresVendorOrderTracker.Tests
       int result = newOrder.Price;
       Assert.AreEqual(testPrice, result);
     }
+
+    [TestMethod]
+    public void GetOrderDate_ReturnsDate_String()
+    {
+      string testDate =  "Test Date";
+      Order newOrder = new Order("Test Name", "Test Desc", 10, testDate);
+      string result = newOrder.Date;
+      Assert.AreEqual(testDate, result);
+    }
   }
 }
