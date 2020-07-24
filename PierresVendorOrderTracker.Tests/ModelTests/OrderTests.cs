@@ -21,12 +21,22 @@ namespace PierresVendorOrderTracker.Tests
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
+    [TestMethod]
     public void GetOrderTitle_ReturnsTitle_String()
     {
       string testTitle =  "Test Title";
       Order newOrder = new Order(testTitle, "testDescription", 10, "testDate");
       string result = newOrder.Title;
       Assert.AreEqual(testTitle, result);
+    }
+
+    [TestMethod]
+    public void GetOrderDescription_ReturnsDescription_String()
+    {
+      string testDescription =  "Test Description";
+      Order newOrder = new Order("Test Name", testDescription, 10, "testDate");
+      string result = newOrder.Description;
+      Assert.AreEqual(testDescription, result);
     }
   }
 }
