@@ -8,7 +8,6 @@ namespace PierresVendorOrderTracker.Tests
   [TestClass]
   public class VendorTests : IDisposable
   {
-
     public void Dispose()
     {
       Vendor.ClearAll();

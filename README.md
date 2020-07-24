@@ -8,7 +8,7 @@
 
 ## Description
 
-_MVC web app that allows user to add or view vendor records and details. From the Vendor pages, you are able to view or add orders to that vendor. Individual orders can be selected to view order details._
+> MVC web app that allows user to add or view vendor records and details. From the Vendor pages, you are able to view or add orders to that vendor. Individual orders can be selected to view order details.
 
 ## Behaviors
 
@@ -28,15 +28,6 @@ _MVC web app that allows user to add or view vendor records and details. From th
 
 
 ## Setup/Installation Requirements
-
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open by downloading:
-1. Internet Browser
-2. Code editor like VScode to view the codebase
-
-##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open by downloading:
-
-1. Download this repository onto your computer
-2. Double click index.html to open it in your web browser
 
 ##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open via Bash/GitBash:
 

@@ -8,7 +8,6 @@ namespace PierresVendorOrderTracker.Tests
   [TestClass]
   public class OrderTests : IDisposable
   {
-
     public void Dispose()
     {
       Order.ClearAll();
@@ -58,21 +57,11 @@ namespace PierresVendorOrderTracker.Tests
     }
 
     [TestMethod]
-    public void GetAllOrders_ReturnsOrders_OrderList()
-    {
-      Order newOrder = new Order("Test Name", "Test Desc", "10", "Test Date");
-      Order newOrder2 = new Order("Test Name", "Test Desc", "10", "Test Date");
-      List<Order> newList = new List<Order> {newOrder, newOrder2};
-      CollectionAssert.AreEqual(newList, Order.GetAll());
-    }
-
-    [TestMethod]
     public void Find_ReturnsCorrectOrder_Order()
     {
       Order newOrder = new Order("Test Name", "Test Desc", "10", "Test Date");
       Order newOrder2 = new Order("Test Name", "Test Desc", "10", "Test Date");
       Assert.AreEqual(newOrder2, Order.Find(2));
     }
-
   }
 }
