@@ -55,5 +55,13 @@ namespace PierresVendorOrderTracker.Tests
       List<Vendor> newList = new List<Vendor> {newVendor1, newVendor2};
       CollectionAssert.AreEqual(newList, Vendor.GetAll());
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectVendorById_Vendor()
+    {
+      Vendor newVendor1 = new Vendor("Test Name", "Test Description");
+      Vendor newVendor2 = new Vendor("Test Name2", "Test Description2");
+      Assert.AreEqual(newVendor2, Vendor.Find(2));
+    }
   }
 }
