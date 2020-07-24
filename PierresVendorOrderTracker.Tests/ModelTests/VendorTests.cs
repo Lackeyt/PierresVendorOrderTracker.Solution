@@ -63,5 +63,16 @@ namespace PierresVendorOrderTracker.Tests
       Vendor newVendor2 = new Vendor("Test Name2", "Test Description2");
       Assert.AreEqual(newVendor2, Vendor.Find(2));
     }
+
+    [TestMethod]
+    public void AddOrder_AssignsOrderToVendor_VendorOrderList()
+    {
+      Order newOrder = new Order();
+      List<Order> newOrderList = new List<Order> {newOrder};
+      Vendor newVendor1 = new Vendor("Test Name", "Test Description");
+      newVendor1.AddOrder(newOrder);
+      List<Order> result = newVendor1.VendorOrders;
+      CollectionAssert.AreEqual(newOrderList, result);
+    }
   }
 }
