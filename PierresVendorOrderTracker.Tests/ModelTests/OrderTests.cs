@@ -6,19 +6,19 @@ using System;
 namespace PierresVendorOrderTracker.Tests
 {
   [TestClass]
-  public class OrderTests //: IDisposable
+  public class OrderTests : IDisposable
   {
 
-    // public void Dispose()
-    // {
-    //   Item.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
 
     [TestMethod]
-    public void ItemConstructor_CreatesInstanceOfItem_Item()
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      // Item newItem = new Item("test");
-      // Assert.AreEqual(typeof(Item), newItem.GetType());
+      Order newOrder = new Order("testTitle", "TestDesc", 10, "testDate");
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
   }
 }

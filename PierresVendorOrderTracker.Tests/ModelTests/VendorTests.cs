@@ -67,7 +67,7 @@ namespace PierresVendorOrderTracker.Tests
     [TestMethod]
     public void AddOrder_AssignsOrderToVendor_VendorOrderList()
     {
-      Order newOrder = new Order();
+      Order newOrder = new Order("testTitle", "TestDesc", 10, "testDate");
       List<Order> newOrderList = new List<Order> {newOrder};
       Vendor newVendor1 = new Vendor("Test Name", "Test Description");
       newVendor1.AddOrder(newOrder);
