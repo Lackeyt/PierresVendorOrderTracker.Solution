@@ -42,7 +42,9 @@ namespace PierresVendorOrderTracker.Tests
     [TestMethod]
     public void GetId_ReturnsVendorId_Int()
     {
-
+      Vendor newVendor = new Vendor("Test Name", "Test Description");
+      int result = newVendor.Id;
+      Assert.AreEqual(1, result);
     }
   }
 }
