@@ -56,5 +56,14 @@ namespace PierresVendorOrderTracker.Tests
       string result = newOrder.Date;
       Assert.AreEqual(testDate, result);
     }
+
+    [TestMethod]
+    public void GetAllOrders_ReturnsOrders_OrderList()
+    {
+      Order newOrder = new Order("Test Name", "Test Desc", 10, "Test Date");
+      Order newOrder2 = new Order("Test Name", "Test Desc", 10, "Test Date");
+      List<Order> newList = new List<Order> {newOrder, newOrder2};
+      CollectionAssert.AreEqual(newList, Order.GetAll());
+    }
   }
 }
