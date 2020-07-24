@@ -24,6 +24,11 @@ namespace PierresVendorOrderTracker.Models
       IdAssignment += 1;
     }
 
+    public static List<Order> GetAll()
+    {
+      return _instances;
+    }
+
     public static void ClearAll()
     {
       _instances.Clear();
