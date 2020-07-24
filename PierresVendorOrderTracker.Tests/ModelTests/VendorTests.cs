@@ -15,10 +15,10 @@ namespace PierresVendorOrderTracker.Tests
     // }
 
     [TestMethod]
-    public void ItemConstructor_CreatesInstanceOfItem_Item()
+    public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-      // Item newItem = new Item("test");
-      // Assert.AreEqual(typeof(Item), newItem.GetType());
+      Vendor newVendor = new Vendor("testName", "testDescription");
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
   }
 }

@@ -2,14 +2,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace PierresVendorOrderTracker.Controllers
 {
-    public class OrderController : Controller
+  public class OrderController : Controller
+  {
+
+    [HttpGet("/")]
+    public ActionResult Index()
     {
-
-      [HttpGet("/")]
-      public ActionResult Index()
-      {
-        return View();
-      }
-
+      return View();
     }
+
+  }
 }
