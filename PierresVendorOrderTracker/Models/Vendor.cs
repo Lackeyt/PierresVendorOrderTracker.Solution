@@ -18,6 +18,8 @@ namespace PierresVendorOrderTracker.Models
       VendorDescription = vendorDescription;
       Id = IdAssignment;
       IdAssignment += 1;
+      _instances.Add(this);
+      VendorOrders = new List<Order>{};
     }
 
     public static void ClearAll()
@@ -25,7 +27,11 @@ namespace PierresVendorOrderTracker.Models
       _instances.Clear();
       IdAssignment = 1;
     }
-  }
 
-  
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
+    }
+
+  }
 }
