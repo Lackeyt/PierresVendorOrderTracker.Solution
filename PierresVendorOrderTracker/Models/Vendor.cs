@@ -40,7 +40,7 @@ namespace PierresVendorOrderTracker.Models
 
     public void AddOrder(Order order)
     {
-      
+      VendorOrders.Add(order);
     }
   }
 }
