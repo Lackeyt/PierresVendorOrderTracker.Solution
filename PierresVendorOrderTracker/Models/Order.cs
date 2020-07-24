@@ -7,13 +7,13 @@ namespace PierresVendorOrderTracker.Models
   {
     public string Title { get; set; }
     public string Description { get; set; }
-    public int Price { get; set; }
+    public string Price { get; set; }
     public string Date { get; set; }
     public int Id { get; }
     private static int IdAssignment = 1;
     private static List<Order> _instances = new List<Order> {};
 
-    public Order(string title, string desc, int price, string date)
+    public Order(string title, string desc, string price, string date)
     {
       Title = title;
       Description = desc;

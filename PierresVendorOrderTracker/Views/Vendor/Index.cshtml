@@ -6,10 +6,12 @@
 {
   <h3>No suckers... I MEAN VENDORS have been added yet!</h3>
 } 
-
+<ul>
 @foreach (Vendor vendor in Model)
 {
-  <h3><a href='/vendors/@vendor.Id'>@vendor.VendorName</a></h3>
+  <li><a href='/vendors/@vendor.Id'>@vendor.VendorName</a></li>
 }
+</ul>
 
+<p><a href='/vendors/New'>Add New Vendor</a></p>
 <p><a href='/'>Home</a></p>

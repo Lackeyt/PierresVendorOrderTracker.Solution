@@ -1,14 +1,13 @@
 @using PierresVendorOrderTracker.Models;
 
-<h1>@Model["vendor"].VendorName's Order List:</h1>
+<h1>Order Details</h1>
 
-<ol>
-  @foreach(Order order in @Model["orders"])
-  {
-    <li><a href='/vendors/@Model["vendors"].Id/orders/new'>@order.Title</a></li>
-  }
-</ol>
 
-<p><a href='/vendors/@Model["vendors"].Id/orders/new'>Add a new order</a></p>
-<p><a href='/vendors'>Retrun to vendor list</a></p>
+<p><strong>Title:</strong> @Model["order"].Title</p>
+<p><strong>Description:</strong> @Model["order"].Description</p>
+<p><strong>Price:</strong> $@Model["order"].Price</p>
+<p><strong>Date:</strong> @Model["order"].Date</p>
+
+
+<p><a href='/vendors/@Model["vendor"].Id'>Return to vendor page</a></p>
 <p><a href='/'>Home</a></p>

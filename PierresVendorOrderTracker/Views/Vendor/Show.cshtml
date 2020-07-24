@@ -1,9 +1,16 @@
 @using PierresVendorOrderTracker.Models;
 
+
+
 <h3>Here are all orders for this vendor</h3>
 
+@if (@Model["vendor"].VendorOrders.Count == 0)
+{
+  <h3>You have not made any orders!</h3>
+}
+
 <ol>
-@foreach (Order order in @Model["orders"])
+@foreach (Order order in @Model["order"])
 {
   <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'><strong>@order.Title</strong><br>
       @order.Description</a></li>
